@@ -32,6 +32,7 @@ class TopBannerCell: UITableViewCell {
         self.btnBack.layer.cornerRadius = 20
         self.rightView.layer.cornerRadius = 16
         self.lblDiscount.layer.cornerRadius = 16
+        self.selectionStyle = .none
 
         let origImage = UIImage(named: "icons8-menu-vertical-50")
         let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)

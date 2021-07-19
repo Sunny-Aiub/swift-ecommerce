@@ -1,21 +1,17 @@
 //
-//  NormalCell.swift
+//  DescriptionCell.swift
 //  swift-ecommerce
 //
-//  Created by Sunny Chowdhury on 7/16/21.
+//  Created by Sunny Chowdhury on 7/19/21.
 //
 
 import UIKit
 
-class NormalCell: UITableViewCell {
+class DescriptionCell: UITableViewCell {
 
-    @IBOutlet weak var leftIcon: UIImageView!
-    @IBOutlet weak var titleLbl: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-
 
     }
 
@@ -25,8 +21,6 @@ class NormalCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
-    
     static var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
@@ -34,5 +28,4 @@ class NormalCell: UITableViewCell {
     static var identifier: String {
         return String(describing: self)
     }
-    
 }

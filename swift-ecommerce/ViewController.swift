@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myTableView: UITableView!
     
+    @IBOutlet weak var lblBadge: UILabel!
+    
     var productViewModel: ProductViewModel = ProductViewModel()
     
     override func viewDidLoad() {
@@ -25,6 +27,11 @@ class ViewController: UIViewController {
         self.myTableView.separatorInset = .zero
         myTableView.register(TopBannerCell.nib, forCellReuseIdentifier: TopBannerCell.identifier)
         myTableView.register(NormalCell.nib, forCellReuseIdentifier: NormalCell.identifier)
+        myTableView.register(ShippingCell.nib, forCellReuseIdentifier: ShippingCell.identifier)
+        myTableView.register(DescriptionCell.nib, forCellReuseIdentifier: DescriptionCell.identifier)
+
+        lblBadge.layer.masksToBounds = true
+        lblBadge.layer.cornerRadius = 12
         
     }
 
